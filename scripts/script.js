@@ -1,8 +1,7 @@
 let pregunta;
 let rta;
-let resultado;
+let resultado = 0;
 
-alert("Responda ingresando 'a' , 'b' o 'c'")
 
 function devolucion() {
     if (rta == true) {
@@ -14,8 +13,8 @@ function devolucion() {
     }
 }
 
-alert("Responda ingresando 'a' , 'b' o 'c'")
-while (resultado != 110) {
+alert("Responda ingresando 'a' , 'b' o 'c', para pasar debe superar el 70%; si no, debera repetir el cuestionario")
+while (resultado < 70) {
     resultado = 0
     pregunta = prompt("¿Cuánto tarda la luz del sol en llegar a la tierra? a) 8 minutos;  b) 1 Hora  c) 13 minutos");
     rta = pregunta == "a"
@@ -38,8 +37,7 @@ while (resultado != 110) {
     devolucion()
 
     alert("Acertaste el " + resultado + "%")
-    resultado += 10;
-
 }
 
 alert("¡Felicitaciones!")
+
